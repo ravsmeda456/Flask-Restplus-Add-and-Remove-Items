@@ -1,9 +1,7 @@
 from flask import Flask
 from flask_restplus import Resource, Api, fields
-from werkzeug.contrib.fixers import ProxyFix
 
 app=Flask(__name__) #instantiate flsk app
-app.wsgi_app = ProxyFix(app.wsgi_app)
 api=Api(app, title="Library",description="Welcome to our Simple Library",) # instantiate api
 
 ns = api.namespace('library', description='Operations')
