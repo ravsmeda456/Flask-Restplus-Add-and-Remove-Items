@@ -53,7 +53,7 @@ class methods(Resource):
 
 @ns.route('/<int:id>')
 @ns.response(404, 'Book not found')
-@ns.param('id', 'The task identifier')
+@ns.param('id', 'The Book identifier')
 class methods(Resource):
     @ns.doc('delete_book')
     @ns.response(204, 'book deleted')
